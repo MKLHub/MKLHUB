@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS logs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    player TEXT,
+    playerCount INTEGER,
+    maxPlayers INTEGER,
+    placeId TEXT,
+    jobId TEXT,
+    timestamp TEXT
+);
+
+CREATE TABLE IF NOT EXISTS pets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    log_id INTEGER,
+    name TEXT,
+    fullName TEXT,
+    rarity TEXT,
+    price TEXT,
+    FOREIGN KEY(log_id) REFERENCES logs(id)
+);
