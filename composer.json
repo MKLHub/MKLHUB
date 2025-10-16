@@ -1,0 +1,7 @@
+{
+  "name": "pet/api",
+  "description": "Pet tracking API with PHP and SQLite",
+  "require": {
+    "php": ">=8.0"
+  }
+}
